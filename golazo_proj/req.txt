@@ -3,3 +3,5 @@ djangorestframework==3.14.0
 django-cors-headers==3.14.0 
 channels==4.0.0  
 djangorestframework
+Pillow
+django-countries
