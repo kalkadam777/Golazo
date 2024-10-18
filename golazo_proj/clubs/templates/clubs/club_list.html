@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Clubs List{% endblock %}
+
+{% block content %}
+<h1>List of Clubs</h1>
+<ul>
+    {% for club in clubs %}
+        <li>{{ club.name }} - {{ club.league }} - {{ club.value }} €</li>
+    {% endfor %}
+</ul>
+{% endblock %}

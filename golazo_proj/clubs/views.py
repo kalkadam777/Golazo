@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Club
 
-# Create your views here.
+
+def club_list(request):
+    clubs = Club.objects.all()
+    return render(request, 'clubs/club_list.html', {'clubs': clubs})

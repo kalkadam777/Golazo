@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ player.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ player.name }} - {{ player.position }}</h1>
+{% if player.photo %}
+    <img src="{{ player.photo.url }}" alt="{{ player.name }}" style="max-width: 200px;">
+{% endif %}
+<p>Current Club: {{ player.current_club }}</p>
+<p>Country: {{ player.country }}</p>
+<p>Value: {{ player.value }} €</p>
+<p>Age: {{ player.age }}</p>
+<p>Goals: {{ player.goals }}</p>
+<p>Assists: {{ player.assists }}</p>
+<a href="{% url 'player-list' %}">Back to Players List</a>
+{% endblock %}

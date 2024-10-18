@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Players List{% endblock %}
+
+{% block content %}
+<h1>List of Players</h1>
+<ul>
+    {% for player in players %}
+        <li>
+            <a href="{% url 'player-detail' player.pk %}">{{ player.name }}</a> - 
+            {{ player.position }} - 
+            {{ player.value }} €
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
