@@ -4,6 +4,35 @@
 
 {% block content %}
 <h1>List of Players</h1>
+
+<form method="GET" action="">
+    <input type="text" name="q" placeholder="Search players..." value="{{ request.GET.q }}">
+
+    <label for="position">Position:</label>
+    <select name="position">
+        <option value="All">All Positions</option>
+        {% for code, name in positions %}
+            <option value="{{ code }}" {% if request.GET.position == code %}selected{% endif %}>{{ name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="min_value">Min Value (€):</label>
+    <input type="range" id="min_value" name="min_value" min="0" max="100000000" step="100000" value="{{ min_value }}">
+    <span id="min_value_output">{{ min_value }} €</span>
+
+    <label for="max_value">Max Value (€):</label>
+    <input type="range" id="max_value" name="max_value" min="0" max="100000000" step="100000" value="{{ max_value }}">
+    <span id="max_value_output">{{ max_value }} €</span>
+
+    <button type="submit">Filter</button>
+</form>
+
+{% if paginator %}
+    <p>Total players: {{ paginator.count }}</p>
+{% else %}
+    <p>No pagination data available.</p>
+{% endif %}
+
 <ul>
     {% for player in players %}
         <li>
@@ -11,6 +40,44 @@
             {{ player.position }} - 
             {{ player.value }} €
         </li>
+    {% empty %}
+        <li>No players available.</li>
     {% endfor %}
 </ul>
+
+{% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">next</a>
+                <a href="?page={{ paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %}
 {% endblock %}
+
+<script>
+    var minValueSlider = document.getElementById("min_value");
+    var minValueOutput = document.getElementById("min_value_output");
+    minValueOutput.innerHTML = minValueSlider.value;
+    minValueSlider.oninput = function() {
+        minValueOutput.innerHTML = this.value + ' €';
+    }
+
+    var maxValueSlider = document.getElementById("max_value");
+    var maxValueOutput = document.getElementById("max_value_output");
+    maxValueOutput.innerHTML = maxValueSlider.value;
+    maxValueSlider.oninput = function() {
+        maxValueOutput.innerHTML = this.value + ' €';
+    }
+</script>
