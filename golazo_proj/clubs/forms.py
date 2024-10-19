@@ -4,4 +4,4 @@ from .models import Club
 class ClubForm(forms.ModelForm):
     class Meta:
         model = Club
-        fields = ['name', 'value', 'country', 'emblem'] 
+        fields = ['name', 'value', 'country', 'emblem', 'league']

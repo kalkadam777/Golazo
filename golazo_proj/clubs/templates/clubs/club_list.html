@@ -3,10 +3,73 @@
 {% block title %}Clubs List{% endblock %}
 
 {% block content %}
-<h1>List of Clubs</h1>
-<ul>
+<h1>Clubs</h1>
+
+<form method="GET" class="filter-form">
+    <label for="country">Country:</label>
+    <select name="country" id="country-filter">
+        <option value="All">All Countries</option>
+        {% for country in countries %}
+            <option value="{{ country.country }}" {% if request.GET.country == country.country %}selected{% endif %}>{{ country.country }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="league">League:</label>
+    <select name="league" id="league-filter" {% if not request.GET.country or request.GET.country == 'All' %}disabled{% endif %}>
+        <option value="">All Leagues</option>
+        {% for league in leagues %}
+            <option value="{{ league.league }}" {% if request.GET.league == league.league %}selected{% endif %}>{{ league.league }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit" class="btn">Filter</button>
+</form>
+
+<ul class="clubs-list">
     {% for club in clubs %}
-        <li>{{ club.name }} - {{ club.league }} - {{ club.value }} €</li>
+        <li class="club-item">
+            <img src="{{ club.emblem.url }}" alt="{{ club.name }} Emblem" class="club-emblem">
+            <div>
+                <a href="{% url 'club-detail' club.pk %}">{{ club.name }}</a> - 
+                {{ club.league }} - 
+                {{ club.value }} €
+            </div>
+        </li>
+    {% empty %}
+        <li>No clubs available.</li>
     {% endfor %}
 </ul>
+
+{% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %}
 {% endblock %}
+
+<script>
+    const countryFilter = document.getElementById('country-filter');
+    const leagueFilter = document.getElementById('league-filter');
+
+    countryFilter.addEventListener('change', function() {
+        if (this.value === 'All') {
+            leagueFilter.disabled = true;
+        } else {
+            leagueFilter.disabled = false;
+        }
+    });
+</script>

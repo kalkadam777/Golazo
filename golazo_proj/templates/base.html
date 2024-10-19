@@ -8,36 +8,52 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-
     <header class="header">
         <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="#">Football App</a>
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <a href="#">Football App</a>
+                </div>
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <!-- Иконка для мобильного меню -->
+                    <span class="navbar-icon"></span>
+                    <span class="navbar-icon"></span>
+                    <span class="navbar-icon"></span>
+                </div>
+                <ul class="nav" id="navbar-menu">
+                    <li><a href="{% url 'player-list' %}" class="{% if request.resolver_match.url_name == 'player-list' %}active{% endif %}">Players</a></li>
+                    <li><a href="{% url 'club-list' %}" class="{% if request.resolver_match.url_name == 'club-list' %}active{% endif %}">Clubs</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}" class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}">Login</a></li>
+                        <li><a href="{% url 'register' %}" class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}">Register</a></li>
+                    {% endif %}
+                </ul>
             </div>
-            <ul class="nav">
-                <li><a href="{% url 'player-list' %}" class="{% if request.resolver_match.url_name == 'player-list' %}active{% endif %}">Players</a></li>
-                <li><a href="{% url 'club-list' %}" class="{% if request.resolver_match.url_name == 'club-list' %}active{% endif %}">Clubs</a></li>
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                    <li><a href="{% url 'login' %}" class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}">Login</a></li>
-                    <li><a href="{% url 'register' %}" class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}">Register</a></li>
-                {% endif %}
-            </ul>
         </nav>
     </header>
 
+    <!-- Основной контент -->
     <main class="main-content">
         <div class="container">
             {% block content %}{% endblock %}
         </div>
     </main>
 
+    <!-- Подвал -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Football App. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Добавляем скрипт для мобильного меню
+        document.getElementById("navbar-toggle").addEventListener("click", function() {
+            document.getElementById("navbar-menu").classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>

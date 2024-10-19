@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ club.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ club.name }}</h1>
+<img src="{{ club.emblem.url }}" alt="{{ club.name }} Emblem" class="club-emblem-detail">
+<p>Country: {{ club.country }}</p>
+<p>League: {{ club.league }}</p>
+<p>Value: {{ club.value }} €</p>
+
+<h2>Players in this club</h2>
+<ul>
+    {% for player in players %}
+        <li>{{ player.name }} - {{ player.position }} - {{ player.value }} €</li>
+    {% empty %}
+        <li>No players available for this club.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'club-list' %}" class="btn">Back to list</a>
+{% endblock %}
