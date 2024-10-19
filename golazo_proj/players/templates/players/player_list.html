@@ -3,13 +3,13 @@
 {% block title %}Players List{% endblock %}
 
 {% block content %}
-<h1>List of Players</h1>
+<h1>Players</h1>
 
-<form method="GET" action="">
-    <input type="text" name="q" placeholder="Search players..." value="{{ request.GET.q }}">
+<form method="GET" action="" class="filter-form">
+    <input type="text" name="q" class="search-box" placeholder="Search players..." value="{{ request.GET.q }}">
 
     <label for="position">Position:</label>
-    <select name="position">
+    <select name="position" class="filter-dropdown">
         <option value="All">All Positions</option>
         {% for code, name in positions %}
             <option value="{{ code }}" {% if request.GET.position == code %}selected{% endif %}>{{ name }}</option>
@@ -24,60 +24,38 @@
     <input type="range" id="max_value" name="max_value" min="0" max="100000000" step="100000" value="{{ max_value }}">
     <span id="max_value_output">{{ max_value }} €</span>
 
-    <button type="submit">Filter</button>
+    <button type="submit" class="btn">Filter</button>
 </form>
 
-{% if paginator %}
-    <p>Total players: {{ paginator.count }}</p>
-{% else %}
-    <p>No pagination data available.</p>
-{% endif %}
-
-<ul>
-    {% for player in players %}
-        <li>
-            <a href="{% url 'player-detail' player.pk %}">{{ player.name }}</a> - 
-            {{ player.position }} - 
-            {{ player.value }} €
-        </li>
-    {% empty %}
-        <li>No players available.</li>
-    {% endfor %}
-</ul>
+<div class="players-list">
+    <ul>
+        {% for player in players %}
+            <li class="player-item">
+                <a href="{% url 'player-detail' player.pk %}">{{ player.name }}</a>
+                <span>{{ player.position }}</span>
+                <span>{{ player.value }} €</span>
+            </li>
+        {% empty %}
+            <li class="no-players">No players available.</li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% if is_paginated %}
-    <div class="pagination">
-        <span class="step-links">
+    <nav class="pagination">
+        <ul>
             {% if page_obj.has_previous %}
-                <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">previous</a>
+                <li><a href="?page=1">&laquo; First</a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
             {% endif %}
 
-            <span class="current">
-                Page {{ page_obj.number }} of {{ paginator.num_pages }}.
-            </span>
+            <li class="active">Page {{ page_obj.number }} of {{ paginator.num_pages }}</li>
 
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">next</a>
-                <a href="?page={{ paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.position %}&position={{ request.GET.position }}{% endif %}{% if request.GET.min_value %}&min_value={{ request.GET.min_value }}{% endif %}{% if request.GET.max_value %}&max_value={{ request.GET.max_value }}{% endif %}">last &raquo;</a>
+                <li><a href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                <li><a href="?page={{ paginator.num_pages }}">Last &raquo;</a></li>
             {% endif %}
-        </span>
-    </div>
+        </ul>
+    </nav>
 {% endif %}
 {% endblock %}
-
-<script>
-    var minValueSlider = document.getElementById("min_value");
-    var minValueOutput = document.getElementById("min_value_output");
-    minValueOutput.innerHTML = minValueSlider.value;
-    minValueSlider.oninput = function() {
-        minValueOutput.innerHTML = this.value + ' €';
-    }
-
-    var maxValueSlider = document.getElementById("max_value");
-    var maxValueOutput = document.getElementById("max_value_output");
-    maxValueOutput.innerHTML = maxValueSlider.value;
-    maxValueSlider.oninput = function() {
-        maxValueOutput.innerHTML = this.value + ' €';
-    }
-</script>

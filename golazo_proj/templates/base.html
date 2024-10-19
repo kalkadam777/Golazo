@@ -8,27 +8,36 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'player-list' %}">Players</a></li>
-                <li><a href="{% url 'club-list' %}">Clubs</a></li>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="#">Football App</a>
+            </div>
+            <ul class="nav">
+                <li><a href="{% url 'player-list' %}" class="{% if request.resolver_match.url_name == 'player-list' %}active{% endif %}">Players</a></li>
+                <li><a href="{% url 'club-list' %}" class="{% if request.resolver_match.url_name == 'club-list' %}active{% endif %}">Clubs</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}" class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}">Login</a></li>
+                    <li><a href="{% url 'register' %}" class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}">Register</a></li>
                 {% endif %}
             </ul>
         </nav>
     </header>
 
-    <main>
-        {% block content %}{% endblock %}
+    <main class="main-content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Football App</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Football App. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
