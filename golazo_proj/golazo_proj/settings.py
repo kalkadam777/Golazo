@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'user_profiles',
     'rest_framework',
     'django_countries',
+    'article',
 ]
 
 MIDDLEWARE = [
