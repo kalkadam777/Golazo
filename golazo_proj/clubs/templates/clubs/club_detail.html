@@ -1,22 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}{{ club.name }}{% endblock %}
 
 {% block content %}
-<h1>{{ club.name }}</h1>
-<img src="{{ club.emblem.url }}" alt="{{ club.name }} Emblem" class="club-emblem-detail">
-<p>Country: {{ club.country }}</p>
-<p>League: {{ club.league }}</p>
-<p>Value: {{ club.value }} €</p>
+<div class="club-detail">
+    <h1>{{ club.name }}</h1>
+    <img src="{{ club.emblem.url }}" alt="{{ club.name }} Emblem" class="club-emblem-detail">
+    <p>Country: {{ club.country }}</p>
+    <p>League: {{ club.league }}</p>
+    <p>Value: {{ club.value }} €</p>
+</div>
 
-<h2>Players in this club</h2>
-<ul>
+<h2>Players in {{ club.name }}</h2>
+
+<div class="players-grid">
     {% for player in players %}
-        <li>{{ player.name }} - {{ player.position }} - {{ player.value }} €</li>
+        <div class="player-card">
+            {% if player.photo %}
+                <img src="{{ player.photo.url }}" alt="{{ player.name }}" class="player-photo">
+            {% else %}
+                <img src="{% static 'images/default_player.png' %}" alt="No Image" class="player-photo">
+            {% endif %}
+            <div class="player-info">
+                <h3>{{ player.name }}</h3>
+                <p>{{ player.position }}</p>
+            </div>
+        </div>
     {% empty %}
-        <li>No players available for this club.</li>
+        <p>No players available for this club.</p>
     {% endfor %}
-</ul>
+</div>
 
-<a href="{% url 'club-list' %}" class="btn">Back to list</a>
+<a href="{% url 'club-list' %}" class="btn">Back to Clubs</a>
 {% endblock %}

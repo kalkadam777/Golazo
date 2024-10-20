@@ -4,7 +4,13 @@ from django.views.generic import ListView, DetailView
 from django.db.models import Q
 
 def home(request):
-    return render(request, 'home.html')
+    valuable_players = Player.objects.order_by('-value')[:5]  
+    young_players = Player.objects.order_by('age')[:5] 
+    context = {
+        'valuable_players': valuable_players,
+        'young_players': young_players,
+    }
+    return render(request, 'home.html', context)
 
 class PlayerListView(ListView):
     model = Player
