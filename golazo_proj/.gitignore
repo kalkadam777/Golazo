@@ -1,0 +1,33 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Virtualenv
+venv/
+env/
+ENV/
+
+# Django specific
+db.sqlite3
+media/
+staticfiles/
+
+# Local settings
+*.local_settings.py
+
+# IDEs/Editors
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# MacOS specific
+.DS_Store
+
+# Deployment
+*.env
