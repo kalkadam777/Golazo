@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
@@ -278,10 +278,16 @@ body {
     max-width: 1200px;
 }
 
+.player-lists h2 {
+    color: #003580;
+}
+
 .player-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .player-item {
@@ -553,7 +559,8 @@ h2 {
     padding: 0 15px;
 }
 .login-container {
-    background: url("/media/club_emblems/login.jpg") no-repeat center center/cover;
+    background: url("/media/club_emblems/login.jpg") no-repeat center
+        center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -616,8 +623,7 @@ h2 {
         padding: 30px;
     }
 }
-* Section Styles */
-.section-clubs {
+* Section Styles */ .section-clubs {
     padding: 40px;
     background: #fafafa;
 }
@@ -695,7 +701,6 @@ h2 {
     padding: 20px;
 }
 
-
 .club-logo {
     width: 120px;
     height: 100px;
@@ -752,4 +757,17 @@ h2 {
 .pagination-current {
     font-size: 1.1rem;
     color: #302424;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    padding-top: 20px;
+}
+
+.navbar-brand {
+    padding-left: 10px;
 }

@@ -1,17 +1,56 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}{{ player.name }}{% endblock %}
+{%block content %}
+<div class="container my-5">
+    <div class="row">
+        <!-- Player Photo Section -->
+        <div class="col-md-4 text-center">
+            {% if player.photo %}
+            <img
+                src="{{ player.photo.url }}"
+                alt="{{ player.name }}"
+                class="img-fluid rounded mb-4"
+                style="max-width: 100%"
+            />
+            {% else %}
+            <img
+                src="../../../media/player_photos/alzhik.jpg"
+                alt="Default player photo"
+                class="img-fluid rounded mb-4"
+                style="max-width: 100%"
+            />
+            {% endif %}
+        </div>
 
-{% block title %}{{ player.name }}{% endblock %}
+        <!-- Player Info Section -->
+        <div class="col-md-8">
+            <h1 class="mb-3">{{ player.name }}</h1>
+            <h4 class="text-muted mb-4">{{ player.position }}</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">
+                    <strong>Current Club:</strong> {{ player.current_club }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Country:</strong> {{ player.country }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Value:</strong> {{ player.value }} €
+                </li>
+                <li class="list-group-item">
+                    <strong>Age:</strong> {{ player.age }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Goals:</strong> {{ player.goals }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Assists:</strong> {{ player.assists }}
+                </li>
+            </ul>
 
-{% block content %}
-<h1>{{ player.name }} - {{ player.position }}</h1>
-{% if player.photo %}
-    <img src="{{ player.photo.url }}" alt="{{ player.name }}" style="max-width: 200px;">
-{% endif %}
-<p>Current Club: {{ player.current_club }}</p>
-<p>Country: {{ player.country }}</p>
-<p>Value: {{ player.value }} €</p>
-<p>Age: {{ player.age }}</p>
-<p>Goals: {{ player.goals }}</p>
-<p>Assists: {{ player.assists }}</p>
-<a href="{% url 'player-list' %}">Back to Players List</a>
+            <!-- Back to Players List Button -->
+            <a href="{% url 'player-list' %}" class="btn btn-primary">
+                Back to Players List
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}

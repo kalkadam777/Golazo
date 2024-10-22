@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Home{% endblock %}
-
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock %}
 {% block content %}
 <div class="player-lists">
     <h2>Самые ценные игроки</h2>
@@ -9,18 +6,26 @@
         {% for player in valuable_players %}
         <div class="player-item">
             {% if player.photo %}
-                <img src="{{ player.photo.url }}" alt="{{ player.name }}">
+            <img src="{{ player.photo.url }}" alt="{{ player.name }}" />
             {% else %}
-                <img src="{% static 'images/default_player.png' %}" alt="No Image">
+            <img
+                src="{% static 'images/default_player.png' %}"
+                alt="No Image"
+            />
             {% endif %}
             <div class="player-info">
                 <h3>{{ player.name }}</h3>
                 <p>{{ player.position }}</p>
                 <div class="player-club">
-                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}">
+                    <img
+                        src="{{ player.current_club.emblem.url }}"
+                        alt="{{ player.current_club.name }}"
+                    />
                     <p>{{ player.current_club.name }}</p>
                 </div>
-                <p class="player-value">{{ player.value|floatformat:2 }} млн €</p>
+                <p class="player-value">
+                    {{ player.value|floatformat:2 }} млн €
+                </p>
             </div>
         </div>
         {% endfor %}
@@ -31,15 +36,21 @@
         {% for player in young_players %}
         <div class="player-item">
             {% if player.photo %}
-                <img src="{{ player.photo.url }}" alt="{{ player.name }}">
+            <img src="{{ player.photo.url }}" alt="{{ player.name }}" />
             {% else %}
-                <img src="{% static 'images/default_player.png' %}" alt="No Image">
+            <img
+                src="{% static 'images/default_player.png' %}"
+                alt="No Image"
+            />
             {% endif %}
             <div class="player-info">
                 <h3>{{ player.name }}</h3>
                 <p>{{ player.position }}</p>
                 <div class="player-club">
-                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}">
+                    <img
+                        src="{{ player.current_club.emblem.url }}"
+                        alt="{{ player.current_club.name }}"
+                    />
                     <p>{{ player.current_club.name }}</p>
                 </div>
                 <p class="player-age">{{ player.age }} лет</p>

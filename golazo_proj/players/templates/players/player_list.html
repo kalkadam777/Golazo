@@ -3,57 +3,104 @@
 {% block title %}Players List{% endblock %}
 
 {% block content %}
-<h1>Players</h1>
+<h1 class="my-4">Players</h1>
 
-<form method="GET" action="" class="filter-form">
-    <input type="text" name="q" class="search-box" placeholder="Search players..." value="{{ request.GET.q }}">
+<!-- Форма фильтрации -->
+<form method="GET" action="" class="row g-3 mb-4">
+    <div class="col-md-4">
+        <input type="text" name="q" class="form-control" placeholder="Search players..." value="{{ request.GET.q }}">
+    </div>
 
-    <label for="position">Position:</label>
-    <select name="position" class="filter-dropdown">
-        <option value="All">All Positions</option>
-        {% for code, name in positions %}
-            <option value="{{ code }}" {% if request.GET.position == code %}selected{% endif %}>{{ name }}</option>
-        {% endfor %}
-    </select>
+    <div class="col-md-3">
+        <label for="position" class="form-label">Position:</label>
+        <select name="position" class="form-select">
+            <option value="All">All Positions</option>
+            {% for code, name in positions %}
+                <option value="{{ code }}" {% if request.GET.position == code %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-    <label for="min_value">Min Value (€):</label>
-    <input type="range" id="min_value" name="min_value" min="0" max="100000000" step="100000" value="{{ min_value }}">
-    <span id="min_value_output">{{ min_value }} €</span>
+    <div class="col-md-2">
+        <label for="min_value" class="form-label">Min Value (€):</label>
+        <input type="range" id="min_value" name="min_value" min="0" max="100000000" step="100000" class="form-range" value="{{ min_value }}">
+        <span class="form-text" id="min_value_output">{{ min_value }} €</span>
+    </div>
 
-    <label for="max_value">Max Value (€):</label>
-    <input type="range" id="max_value" name="max_value" min="0" max="100000000" step="100000" value="{{ max_value }}">
-    <span id="max_value_output">{{ max_value }} €</span>
+    <div class="col-md-2">
+        <label for="max_value" class="form-label">Max Value (€):</label>
+        <input type="range" id="max_value" name="max_value" min="0" max="100000000" step="100000" class="form-range" value="{{ max_value }}">
+        <span class="form-text" id="max_value_output">{{ max_value }} €</span>
+    </div>
 
-    <button type="submit" class="btn">Filter</button>
+    <div class="col-md-1 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary w-100">Filter</button>
+    </div>
 </form>
 
-<div class="players-list">
-    <ul>
-        {% for player in players %}
-            <li class="player-item">
-                <a href="{% url 'player-detail' player.pk %}">{{ player.name }}</a>
-                <span>{{ player.position }}</span>
-                <span>{{ player.value }} €</span>
-            </li>
-        {% empty %}
-            <li class="no-players">No players available.</li>
-        {% endfor %}
-    </ul>
+<!-- Список игроков -->
+<!-- Список игроков -->
+<div class="row">
+    {% for player in players %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="row g-0">
+                    <!-- Player Photo Section -->
+                    <div class="col-4">
+                        {% if player.photo %}
+                            <img src="{{ player.photo.url }}" alt="{{ player.name }}" class="img-fluid rounded-start" style="height: 160px; width: auto;">
+                        {% else %}
+                            <img src="../../../media/player_photos/alzhik.jpg" alt="Default player photo" class="img-fluid rounded-start" style="height: 100%; width: auto;">
+                        {% endif %}
+                    </div>
+                    <!-- Player Info Section -->
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{% url 'player-detail' player.pk %}" class="text-decoration-none">{{ player.name }}</a>
+                            </h5>
+                            <p class="card-text">
+                                <strong>Position:</strong> {{ player.position }}<br>
+                                <strong>Value:</strong> {{ player.value }} €
+                            </p>
+                            <a href="{% url 'player-detail' player.pk %}" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="col-12">
+            <div class="alert alert-warning">No players available.</div>
+        </div>
+    {% endfor %}
 </div>
 
+
+<!-- Пагинация -->
 {% if is_paginated %}
-    <nav class="pagination">
-        <ul>
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-                <li><a href="?page=1">&laquo; First</a></li>
-                <li><a href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                <li class="page-item">
+                    <a href="?page=1" class="page-link">&laquo; First</a>
+                </li>
+                <li class="page-item">
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">Previous</a>
+                </li>
             {% endif %}
 
-            <li class="active">Page {{ page_obj.number }} of {{ paginator.num_pages }}</li>
+            <li class="page-item active">
+                <span class="page-link">Page {{ page_obj.number }} of {{ paginator.num_pages }}</span>
+            </li>
 
             {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}">Next</a></li>
-                <li><a href="?page={{ paginator.num_pages }}">Last &raquo;</a></li>
+                <li class="page-item">
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next</a>
+                </li>
+                <li class="page-item">
+                    <a href="?page={{ paginator.num_pages }}" class="page-link">Last &raquo;</a>
+                </li>
             {% endif %}
         </ul>
     </nav>
