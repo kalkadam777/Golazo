@@ -616,3 +616,140 @@ h2 {
         padding: 30px;
     }
 }
+* Section Styles */
+.section-clubs {
+    padding: 40px;
+    background: #fafafa;
+}
+
+.clubs-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #003580;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Filter Form */
+.club-filter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.btn-filter {
+    background-color: #003580;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+    background-color: #0056b3;
+}
+
+/* Club List */
+.clubs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.club-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+
+.club-logo {
+    width: 120px;
+    height: 100px;
+    border-radius: 0%;
+    margin-bottom: 15px;
+}
+
+.club-details {
+    text-align: center;
+}
+
+.club-link {
+    font-size: 1.3rem;
+    color: #003580;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.club-link:hover {
+    color: #0056b3;
+}
+
+.club-info {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pagination-links {
+    display: flex;
+    gap: 15px;
+}
+
+.pagination-btn {
+    background-color: #044afa;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #53ff03;
+}
+
+.pagination-current {
+    font-size: 1.1rem;
+    color: #302424;
+}
