@@ -4,23 +4,20 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Golazo{% endblock %}</title>
+    <title>{% block title %}Golazo | Football Unleashed{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <div class="navbar-container">
-                <div class="navbar-brand">
-                    <a href="#">Golazo</a>
-                </div>
+                <a href="/" class="navbar-brand">Golazo</a>
                 <div class="navbar-toggle" id="navbar-toggle">
-                    <!-- Иконка для мобильного меню -->
                     <span class="navbar-icon"></span>
                     <span class="navbar-icon"></span>
                     <span class="navbar-icon"></span>
                 </div>
-                <ul class="nav" id="navbar-menu">
+                <ul class="nav-menu" id="navbar-menu">
                     <li><a href="{% url 'player-list' %}" class="{% if request.resolver_match.url_name == 'player-list' %}active{% endif %}">Players</a></li>
                     <li><a href="{% url 'club-list' %}" class="{% if request.resolver_match.url_name == 'club-list' %}active{% endif %}">Clubs</a></li>
                     {% if user.is_authenticated %}
@@ -34,26 +31,25 @@
         </nav>
     </header>
 
-    <!-- Основной контент -->
     <main class="main-content">
         <div class="container">
             {% block content %}{% endblock %}
         </div>
     </main>
-
-    <!-- Подвал -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Football App. All rights reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2024 Golazo | Your Ultimate Football Hub</p>
+            <ul class="footer-links">
+                <li><a href="{% url 'player-list' %}">Players</a></li>
+                <li><a href="{% url 'club-list' %}">Clubs</a></li>
+]            </ul>
         </div>
     </footer>
 
     <script>
-        // Добавляем скрипт для мобильного меню
         document.getElementById("navbar-toggle").addEventListener("click", function() {
             document.getElementById("navbar-menu").classList.toggle("active");
         });
     </script>
-
 </body>
 </html>
