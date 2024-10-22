@@ -552,3 +552,67 @@ h2 {
     margin: 0 auto;
     padding: 0 15px;
 }
+.login-container {
+    background: url("/media/club_emblems/login.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login/Register Box */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    color: #003580;
+    margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+/* Button */
+.btn {
+    background-color: #003580;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffd700;
+    color: #003580;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 30px;
+    }
+}
