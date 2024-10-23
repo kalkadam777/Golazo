@@ -1,31 +1,90 @@
-{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
 {% block content %}
+<div class="goal-leaders-container">
+    <div class="goal-leader">
+        <div class="goal-leaders-header">
+            <h2>Bundesliga Top Scorers</h2>
+        </div>
+        {% if bundesliga_top_scorer %}
+        <div class="top-scorer">
+            <img src="{{ bundesliga_top_scorer.photo.url }}" alt="{{ bundesliga_top_scorer.name }}" class="top-scorer-photo">
+            <div class="top-scorer-info">
+                <h3>{{ bundesliga_top_scorer.name }}</h3>
+                <p>{{ bundesliga_top_scorer.goals }} Голов</p>
+                <p>{{ bundesliga_top_scorer.current_club.name }}</p>
+            </div>
+        </div>
+        <ul class="score-list">
+            {% for player in bundesliga_top_scorers %}
+            <li>
+                <span>{{ forloop.counter }}</span>
+                <div>
+                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}" class="club-icon">
+                    <span>{{ player.name }}</span>
+                </div>
+                <span>{{ player.goals }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No data available for Bundesliga.</p>
+        {% endif %}
+    </div>
+
+    <div class="goal-leader">
+        <div class="goal-leaders-header">
+            <h2>La Liga Top Scorers</h2>
+        </div>
+        {% if la_liga_top_scorer %}
+        <div class="top-scorer">
+            <img src="{{ la_liga_top_scorer.photo.url }}" alt="{{ la_liga_top_scorer.name }}" class="top-scorer-photo">
+            <div class="top-scorer-info">
+                <h3>{{ la_liga_top_scorer.name }}</h3>
+                <p>{{ la_liga_top_scorer.goals }} Голов</p>
+                <p>{{ la_liga_top_scorer.current_club.name }}</p>
+            </div>
+        </div>
+        <ul class="score-list">
+            {% for player in la_liga_top_scorers %}
+            <li>
+                <span>{{ forloop.counter }}</span>
+                <div>
+                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}" class="club-icon">
+                    <span>{{ player.name }}</span>
+                </div>
+                <span>{{ player.goals }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No data available for La Liga.</p>
+        {% endif %}
+    </div>
+
+
+</div>
+
 <div class="player-lists">
     <h2>Самые ценные игроки</h2>
     <div class="player-list-grid">
         {% for player in valuable_players %}
         <div class="player-item">
             {% if player.photo %}
-            <img src="{{ player.photo.url }}" alt="{{ player.name }}" />
+            <img src="{{ player.photo.url }}" alt="{{ player.name }}">
             {% else %}
-            <img
-                src="{% static 'images/default_player.png' %}"
-                alt="No Image"
-            />
+            <img src="{% static 'images/default_player.png' %}" alt="No Image">
             {% endif %}
             <div class="player-info">
                 <h3>{{ player.name }}</h3>
                 <p>{{ player.position }}</p>
                 <div class="player-club">
-                    <img
-                        src="{{ player.current_club.emblem.url }}"
-                        alt="{{ player.current_club.name }}"
-                    />
+                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}">
                     <p>{{ player.current_club.name }}</p>
                 </div>
-                <p class="player-value">
-                    {{ player.value|floatformat:2 }} млн €
-                </p>
+                <p class="player-value">{{ player.value|floatformat:2 }} млн €</p>
             </div>
         </div>
         {% endfor %}
@@ -36,21 +95,15 @@
         {% for player in young_players %}
         <div class="player-item">
             {% if player.photo %}
-            <img src="{{ player.photo.url }}" alt="{{ player.name }}" />
+            <img src="{{ player.photo.url }}" alt="{{ player.name }}">
             {% else %}
-            <img
-                src="{% static 'images/default_player.png' %}"
-                alt="No Image"
-            />
+            <img src="{% static 'images/default_player.png' %}" alt="No Image">
             {% endif %}
             <div class="player-info">
                 <h3>{{ player.name }}</h3>
                 <p>{{ player.position }}</p>
                 <div class="player-club">
-                    <img
-                        src="{{ player.current_club.emblem.url }}"
-                        alt="{{ player.current_club.name }}"
-                    />
+                    <img src="{{ player.current_club.emblem.url }}" alt="{{ player.current_club.name }}">
                     <p>{{ player.current_club.name }}</p>
                 </div>
                 <p class="player-age">{{ player.age }} лет</p>

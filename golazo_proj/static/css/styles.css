@@ -771,3 +771,114 @@ h2 {
 .navbar-brand {
     padding-left: 10px;
 }
+
+.goal-leaders-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.goal-leader {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.goal-leaders-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.goal-leaders-header h2 {
+    font-size: 1.5rem;
+    color: #003580;
+    margin: 0;
+}
+
+.top-scorer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.top-scorer img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.top-scorer-info {
+    text-align: center;
+}
+
+.top-scorer-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003580;
+}
+
+.top-scorer-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.score-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.score-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.score-list li:last-child {
+    border-bottom: none;
+}
+
+.score-list li span {
+    font-size: 1rem;
+    color: #003580;
+}
+
+.score-list li .club-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.first-place {
+    background-color: #003580;
+    color: #fff;
+    font-weight: bold;
+}
+
+.first-place .club-icon {
+    filter: brightness(0) invert(1);
+}
+
+.all-leaders {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    font-weight: bold;
+    color: #ff0000;
+    border-top: 1px solid #ddd;
+}
+
+.all-leaders a {
+    color:

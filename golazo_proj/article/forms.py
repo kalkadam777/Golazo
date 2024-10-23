@@ -2,22 +2,13 @@ from django import forms
 from .models import Article, Comment
 
 class ArticleForm(forms.ModelForm):
-    title = forms.CharField(required=True,
-                            max_length=100,
-                            widget=forms.widgets.Textarea(
-                                attrs={"placeholder": "Enter The Title:",
-                                       "class": "form-control"}),
-                            label="")
-    content = forms.CharField(required=True,
-                              max_length=500,
-                              widget=forms.widgets.Textarea(
-                                  attrs={"placeholder": "Fill The Content:",
-                                         "class": "form-control"}),
-                              label="")
-
     class Meta:
         model = Article
-        exclude = ("author", "created_at")
+        fields = ['title', 'content', 'image'] 
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Content'}),
+        }
 
 
 class CommentForm(forms.ModelForm):

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.username }}'s Profile{% endblock %}
+
+{% block content %}
+    <h1>{{ user.username }}'s Profile</h1>
+    <p>Email: {{ user.email }}</p>
+
+    <h2>Your Favorite Players</h2>
+    <ul>
+        {% for player in user.profile.favorite_players.all %}
+            <li>{{ player.name }} - {{ player.current_club.name }}</li>
+        {% empty %}
+            <li>No favorite players yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

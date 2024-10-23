@@ -3,6 +3,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegistrationForm, UserProfileForm
+from django.shortcuts import redirect, get_object_or_404
+from players.models import Player  
 
 def register(request):
     if request.method == 'POST':

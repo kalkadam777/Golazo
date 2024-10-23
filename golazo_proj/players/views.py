@@ -4,13 +4,31 @@ from django.views.generic import ListView, DetailView
 from django.db.models import Q
 
 def home(request):
-    valuable_players = Player.objects.order_by('-value')[:5]  
-    young_players = Player.objects.order_by('age')[:5] 
+    bundesliga_top_scorer = Player.objects.filter(current_club__league="Bundesliga").order_by('-goals').first()
+    bundesliga_top_scorers = Player.objects.filter(current_club__league="Bundesliga").order_by('-goals')[1:5]
+
+    la_liga_top_scorer = Player.objects.filter(current_club__league="LaLiga").order_by('-goals').first()
+    la_liga_top_scorers = Player.objects.filter(current_club__league="LaLiga").order_by('-goals')[1:5]
+
+    apl_top_scorer = Player.objects.filter(current_club__league="Premier League").order_by('-goals').first()
+    apl_top_scorers = Player.objects.filter(current_club__league="Premier League").order_by('-goals')[1:5]
+
+    valuable_players = Player.objects.order_by('-value')[:5]
+    young_players = Player.objects.order_by('age')[:5]
+    is_journalist = request.user.groups.filter(name='Journalist').exists() if request.user.is_authenticated else False
     context = {
+        'bundesliga_top_scorer': bundesliga_top_scorer,
+        'bundesliga_top_scorers': bundesliga_top_scorers,
+        'la_liga_top_scorer': la_liga_top_scorer,
+        'la_liga_top_scorers': la_liga_top_scorers,
+        'apl_top_scorer': apl_top_scorer,
+        'apl_top_scorers': apl_top_scorers,
         'valuable_players': valuable_players,
         'young_players': young_players,
+        'is_journalist': is_journalist,
     }
     return render(request, 'home.html', context)
+
 
 class PlayerListView(ListView):
     model = Player
@@ -42,7 +60,7 @@ class PlayerListView(ListView):
         context = super().get_context_data(**kwargs)
         context['positions'] = Player.POSITION_CHOICES  
         context['min_value'] = self.request.GET.get('min_value', 0)
-        context['max_value'] = self.request.GET.get('max_value', 100000000)  
+        context['max_value'] = self.request.GET.get('max_value', 300000000)  
         return context
 
 class PlayerDetailView(DetailView):

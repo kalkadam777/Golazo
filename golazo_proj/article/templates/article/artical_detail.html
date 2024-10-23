@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ article.title }}</h1>
+<p>By: {{ article.author.username }} | Published on: {{ article.created_at|date:"F j, Y" }}</p>
+<p>{{ article.content }}</p>
+
+{% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.title }}" style="max-width: 100%;">
+{% endif %}
+
+<hr>
+
+<h3>Comments</h3>
+<ul>
+    {% for comment in comments %}
+    <li>
+        <p><strong>{{ comment.author.username }}:</strong> {{ comment.content }}</p>
+        <p><em>{{ comment.created_at|date:"F j, Y H:i" }}</em></p>
+    </li>
+    {% empty %}
+    <li>No comments yet. Be the first to comment!</li>
+    {% endfor %}
+</ul>
+
+<h4>Add a Comment</h4>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a href="{% url 'article_list' %}">Back to Articles</a>
+{% endblock %}
