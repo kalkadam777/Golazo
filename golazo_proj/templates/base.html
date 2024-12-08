@@ -39,22 +39,33 @@
                             >
                         </li>
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% if is_article_writer %}
+                            <li>
+                                <a
+                                    href="{% url 'create_article' %}"
+                                    class="{% if request.resolver_match.url_name == 'create_article' %}active{% endif %}"
+                                    >Create Article</a
+                                >
+                            </li>
+                            {% endif %}
+                            <li>
+                                <a href="{% url 'logout' %}">Logout</a>
+                            </li>
                         {% else %}
-                        <li>
-                            <a
-                                href="{% url 'login' %}"
-                                class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}"
-                                >Login</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="{% url 'register' %}"
-                                class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}"
-                                >Register</a
-                            >
-                        </li>
+                            <li>
+                                <a
+                                    href="{% url 'login' %}"
+                                    class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}"
+                                    >Login</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="{% url 'register' %}"
+                                    class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}"
+                                    >Register</a
+                                >
+                            </li>
                         {% endif %}
                     </ul>
                 </div>
