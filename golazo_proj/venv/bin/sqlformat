@@ -1,4 +1,4 @@
-#!/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/bin/python3.12
+#!/Users/kalkadam/Desktop/KBTU_Django_Fall_2024/Golazo/golazo_proj/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
