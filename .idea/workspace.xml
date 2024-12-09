@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ec709a-e9ab-474a-ab4d-30169587cfeb" name="Changes" comment="" />
+    <list default="true" id="40ec709a-e9ab-474a-ab4d-30169587cfeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/context_processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/migrations/0002_article_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/templates/article/article_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/templates/article/create_article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/article/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/golazo_proj/media/articles/logonew1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/article/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/article/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/article/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/article/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/article/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/article/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/article/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/article/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/golazo_proj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/golazo_proj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/golazo_proj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/golazo_proj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/Activate.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/activate.csh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/activate.fish" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/django-admin" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/django-admin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/pip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/pip3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/python" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/python" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/python3" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/python3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/bin/sqlformat" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/bin/sqlformat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golazo_proj/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/golazo_proj/venv/pyvenv.cfg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,22 +81,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.Golazo2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Alzhan-branch&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.Golazo2.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Alzhan-branch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Golazo2" type="Python.DjangoServer" factoryName="Django server">
       <module name="Golazo2" />
@@ -115,6 +144,7 @@
       <workItem from="1730290948468" duration="658000" />
       <workItem from="1730787126899" duration="775000" />
       <workItem from="1730987867692" duration="1167000" />
+      <workItem from="1733722353345" duration="35000" />
     </task>
     <servers />
   </component>

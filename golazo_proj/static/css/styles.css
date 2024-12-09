@@ -751,7 +751,7 @@ h2 {
 }
 
 .pagination-btn:hover {
-    background-color: #53ff03;
+    background-color: #53ff03;                             
 }
 
 .pagination-current {
@@ -770,4 +770,9 @@ h2 {
 
 .navbar-brand {
     padding-left: 10px;
+}
+
+
+.navbaer-brand{
+    padding-left: 20px;xxxxxc frfr
 }
