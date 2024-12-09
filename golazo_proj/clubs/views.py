@@ -1,8 +1,4 @@
-from django.db.models import Q
-from django.views.generic import DeleteView
-from django.urls import reverse_lazy
 from .models import Club
-from players.models import Player  
 from rest_framework import generics
 from .serializers import ClubSerializer
 
