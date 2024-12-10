@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ league.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ league.name }}</h1>
+<img src="{{ league.logo.url }}" alt="{{ league.name }}" style="width: 150px; height: auto;">
+<p>Country: {{ league.country }}</p>
+<p>Start Date: {{ league.start_date }}</p>
+<p>End Date: {{ league.end_date }}</p>
+
+<h2>Standings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Club</th>
+            <th>Matches Played</th>
+            <th>Wins</th>
+            <th>Draws</th>
+            <th>Losses</th>
+            <th>Goals Scored</th>
+            <th>Goals Conceded</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for standing in standings %}
+        <tr>
+            <td>{{ standing.club.name }}</td>
+            <td>{{ standing.matches_played }}</td>
+            <td>{{ standing.wins }}</td>
+            <td>{{ standing.draws }}</td>
+            <td>{{ standing.losses }}</td>
+            <td>{{ standing.goals_scored }}</td>
+            <td>{{ standing.goals_conceded }}</td>
+            <td>{{ standing.points }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Matches</h2>
+<ul>
+    {% for match in matches %}
+    <li>
+        {{ match.home_team.name }} {{ match.home_team_score }} - {{ match.away_team_score }} {{ match.away_team.name }}
+        ({{ match.match_date }})
+    </li>
+    {% endfor %}
+</ul>
+
+{% if can_add_match %}
+<a href="{% url 'generate_matches' league.pk %}">Generate Matches</a>
+{% endif %}
+
+{% if can_change_standings %}
+<a href="{% url 'update_standings' league.pk %}">Update Standings</a>
+{% endif %}
+{% endblock %}

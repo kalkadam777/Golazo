@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Leagues{% endblock %}
+
+{% block content %}
+<h1>All Leagues</h1>
+<ul>
+    {% for league in leagues %}
+    <li>
+        <a href="{% url 'league_detail' league.pk %}">{{ league.name }}</a>
+        - {{ league.country }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
