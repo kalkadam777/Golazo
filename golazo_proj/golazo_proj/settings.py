@@ -22,6 +22,9 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    )
 }
 
 
@@ -59,6 +62,7 @@ INSTALLED_APPS = [
     'coaches',
     'leagues',
     'django_filters',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
