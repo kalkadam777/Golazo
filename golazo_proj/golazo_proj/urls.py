@@ -27,6 +27,7 @@ urlpatterns = [
     path('', player_views.home, name='home'),
     path('user/', include('user_profiles.urls')),
     path('articles/', include('article.urls')),
+    path('coaches/', include('coaches.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
