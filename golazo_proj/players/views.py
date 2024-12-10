@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView
 from django.db.models import Q
 from rest_framework import generics
 from .serializers import PlayerSerializer
+from .pagination import CustomPageNumberPagination
 
 def home(request):
     valuable_players = Player.objects.order_by('-value')[:5]  
@@ -24,9 +25,11 @@ class YoungPlayersListView(generics.ListAPIView):
     serializer_class = PlayerSerializer
     
 
+
 class PlayerListView(generics.ListAPIView):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
+    pagination_class = CustomPageNumberPagination
 
     
 class PlayerDetailView(generics.RetrieveAPIView):
