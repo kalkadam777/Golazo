@@ -65,6 +65,55 @@ INSTALLED_APPS = [
     'drf_yasg',
 ]
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'clubs_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/clubs.log'),
+            'formatter': 'verbose',
+        },
+        'players_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/players.log'),
+            'formatter': 'verbose',
+        },
+        'debug_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'clubs': {
+            'handlers': ['clubs_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'players': {
+            'handlers': ['players_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'debug_logger': {
+            'handlers': ['debug_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
