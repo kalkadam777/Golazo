@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'coaches',
     'leagues',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
