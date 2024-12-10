@@ -1,0 +1,4 @@
+2024-12-10 23:09:49,352 [WARNING] django.request: Unauthorized: /user/token/
+2024-12-10 23:10:28,103 [WARNING] django.request: Unauthorized: /user/token/
+2024-12-10 23:11:36,445 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/golazo_proj/settings.py changed, reloading.
+2024-12-10 23:12:25,642 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/clubs/views.py changed, reloading.
