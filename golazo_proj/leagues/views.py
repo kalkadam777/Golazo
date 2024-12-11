@@ -19,7 +19,7 @@ class LeagueViewSet(viewsets.ModelViewSet):
 class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
-    permission_classes = [IsAuthenticated, IsLeagueAdmin]
+    # permission_classes = [IsAuthenticated, IsLeagueAdmin]
 
 
 class StandingsViewSet(viewsets.ReadOnlyModelViewSet):

@@ -11,3 +11,180 @@
 2024-12-11 00:03:25,541 [DEBUG] debug_logger: Player list filters: <QueryDict: {}>
 2024-12-11 00:06:46,560 [DEBUG] debug_logger: Player list filters: <QueryDict: {}>
 2024-12-11 00:08:53,646 [DEBUG] debug_logger: Home page data: valuable_players=<QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>, young_players=<QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:14:27,875 [DEBUG] debug_logger: Home page data: valuable_players=<QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>, young_players=<QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:14:59,175 [DEBUG] debug_logger: Home page data: valuable_players=<QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>, young_players=<QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:30:22,362 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:30:22,416 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:30:26,902 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:30:26,924 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:30:27,293 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:30:27,309 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:30:27,790 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:30:27,806 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:30:28,697 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:33:13,534 [DEBUG] debug_logger: Player details: Harry Kane (Forward)
+2024-12-11 04:33:15,388 [DEBUG] debug_logger: Player list filters: <QueryDict: {}>
+2024-12-11 04:33:17,528 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:34:03,853 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:06,393 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:34:07,726 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:34:07,753 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:34:10,784 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:34:10,810 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:34:12,700 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:20,108 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:21,029 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:21,597 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:22,059 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:24,076 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:24,513 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:24,762 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:25,029 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:25,278 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:25,494 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:26,078 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:26,429 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:26,596 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:26,743 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:27,806 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:29,929 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:30,163 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:30,325 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:30,681 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:34:30,864 [DEBUG] debug_logger: Player list filters: <QueryDict: {'search': ['']}>
+2024-12-11 04:43:57,613 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:44:00,414 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:44:58,950 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:45:00,518 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:45:01,773 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:45:02,306 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:46:33,408 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:46:33,716 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['${page}'], 'search': ['']}>
+2024-12-11 04:47:04,333 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:47:06,116 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:47:08,957 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['2'], 'search': ['']}>
+2024-12-11 04:47:09,740 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['3'], 'search': ['']}>
+2024-12-11 04:47:14,996 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:47:17,081 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['h,,0,100000000'], 'search': ['h']}>
+2024-12-11 04:47:17,787 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['ha,,0,100000000'], 'search': ['ha']}>
+2024-12-11 04:47:18,239 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['har,,0,100000000'], 'search': ['har']}>
+2024-12-11 04:47:18,673 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['harr,,0,100000000'], 'search': ['harr']}>
+2024-12-11 04:47:19,448 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['harry,,0,100000000'], 'search': ['harry']}>
+2024-12-11 04:47:21,098 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:49:46,463 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:49:46,484 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:49:51,140 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 04:49:51,165 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 04:49:59,689 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:50:36,398 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:50:38,911 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['k,,0,100000000'], 'search': ['k']}>
+2024-12-11 04:50:38,979 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['kj,,0,100000000'], 'search': ['kj']}>
+2024-12-11 04:50:39,126 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['kj ,,0,100000000'], 'search': ['kj ']}>
+2024-12-11 04:50:39,221 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['kj k,,0,100000000'], 'search': ['kj k']}>
+2024-12-11 04:50:39,763 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['kj ,,0,100000000'], 'search': ['kj ']}>
+2024-12-11 04:50:39,971 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['kj,,0,100000000'], 'search': ['kj']}>
+2024-12-11 04:50:40,101 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['k,,0,100000000'], 'search': ['k']}>
+2024-12-11 04:50:40,257 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': [',,0,100000000'], 'search': ['']}>
+2024-12-11 04:51:33,170 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['n,,0,100000000'], 'search': ['n']}>
+2024-12-11 04:51:33,325 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nk,,0,100000000'], 'search': ['nk']}>
+2024-12-11 04:51:33,560 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nkk,,0,100000000'], 'search': ['nkk']}>
+2024-12-11 04:51:33,634 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nkkj,,0,100000000'], 'search': ['nkkj']}>
+2024-12-11 04:51:33,696 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nkkjb,,0,100000000'], 'search': ['nkkjb']}>
+2024-12-11 04:51:33,819 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nkkjbk,,0,100000000'], 'search': ['nkkjbk']}>
+2024-12-11 04:51:33,860 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['nkkjbkj,,0,100000000'], 'search': ['nkkjbkj']}>
+2024-12-11 04:52:18,108 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 04:52:26,979 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['h,,0,100000000'], 'search': ['h']}>
+2024-12-11 04:52:27,353 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['hu,,0,100000000'], 'search': ['hu']}>
+2024-12-11 04:52:27,958 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['hur,,0,100000000'], 'search': ['hur']}>
+2024-12-11 04:52:28,279 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['hurr,,0,100000000'], 'search': ['hurr']}>
+2024-12-11 04:52:28,923 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['hurry,,0,100000000'], 'search': ['hurry']}>
+2024-12-11 04:53:13,395 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:00:32,750 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:00:32,791 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:00:41,712 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:00:41,748 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:00:43,219 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:00:43,233 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:00:45,022 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:04:03,557 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:06:12,579 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:06:12,613 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:12:06,176 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:12:06,213 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:16:47,937 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:16:51,119 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:16:51,150 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:25:32,503 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:31:47,764 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:32:02,718 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:32:02,755 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:32:07,383 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:32:08,493 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:32:08,526 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:39:28,388 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:39:28,419 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:39:51,066 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:39:51,094 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:40:32,960 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:40:32,985 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:40:46,294 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:40:57,285 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:40:57,313 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:41:08,446 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:41:13,272 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['2'], 'search': ['']}>
+2024-12-11 05:41:16,176 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['3'], 'search': ['']}>
+2024-12-11 05:41:16,954 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['4'], 'search': ['']}>
+2024-12-11 05:41:18,036 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['5'], 'search': ['']}>
+2024-12-11 05:41:19,283 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['55'], 'search': ['']}>
+2024-12-11 05:41:21,404 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:41:25,035 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['h,,0,100000000'], 'search': ['h']}>
+2024-12-11 05:41:25,413 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['ha,,0,100000000'], 'search': ['ha']}>
+2024-12-11 05:41:30,253 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['h,,0,100000000'], 'search': ['h']}>
+2024-12-11 05:41:30,407 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': [',,0,100000000'], 'search': ['']}>
+2024-12-11 05:41:35,305 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:41:40,500 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:41:40,522 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:41:57,773 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:42:07,239 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['2'], 'search': ['']}>
+2024-12-11 05:42:08,704 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['3'], 'search': ['']}>
+2024-12-11 05:42:09,770 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['5'], 'search': ['']}>
+2024-12-11 05:42:10,636 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['6'], 'search': ['']}>
+2024-12-11 05:42:11,669 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['55'], 'search': ['']}>
+2024-12-11 05:42:14,154 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:42:43,691 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:42:43,719 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:43:39,358 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:43:39,389 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:43:41,857 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:43:41,888 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:43:52,368 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:43:52,397 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:45:00,811 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:45:00,848 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:47:36,883 [DEBUG] debug_logger: Home page data: valuable_players=<QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>, young_players=<QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:48:16,671 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 05:48:16,707 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:48:20,403 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:49:17,521 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:49:33,411 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:50:33,465 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:50:53,138 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:51:06,453 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:51:10,519 [DEBUG] debug_logger: Player details: Harry Kane (Forward)
+2024-12-11 05:51:14,554 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 05:51:18,873 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:52:53,586 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:53:13,452 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:53:14,449 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:53:55,758 [DEBUG] debug_logger: Home page data: valuable_players=<QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>, young_players=<QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 05:57:11,187 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 05:58:44,008 [DEBUG] debug_logger: Player details: Vinicius Junior (Forward)
+2024-12-11 06:02:31,562 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 06:02:31,591 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 06:02:32,939 [DEBUG] debug_logger: Player list filters: <QueryDict: {'page': ['1'], 'search': ['']}>
+2024-12-11 06:14:54,107 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 06:14:54,132 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 06:19:23,427 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 06:19:23,473 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>
+2024-12-11 06:21:14,459 [DEBUG] debug_logger: Valuable players queryset: <QuerySet [<Player: Vinicius Junior (Forward)>, <Player: Erling Haaland (Forward)>, <Player: Jude Bellingham (Midfielder)>, <Player: Kylian Mbappé (Forward)>, <Player: Lamine Yamal (Forward)>]>
+2024-12-11 06:21:14,484 [DEBUG] debug_logger: Young players queryset: <QuerySet [<Player: Pau Cubarsí (Defender)>, <Player: Marc Bernal (Midfielder)>, <Player: Lamine Yamal (Forward)>, <Player: Adam Aznou (Defender)>, <Player: Almugera Kabar (Defender)>]>

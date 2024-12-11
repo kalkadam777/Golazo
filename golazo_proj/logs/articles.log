@@ -115,3 +115,77 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is
 2024-12-11 06:25:15,531 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
 2024-12-11 06:25:31,200 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
 2024-12-11 06:25:42,274 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 04:14:34,097 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 04:15:28,849 [WARNING] django.request: Not Found: /article
+2024-12-11 04:15:33,254 [INFO] articles: Article list accessed.
+2024-12-11 04:43:57,617 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:44:00,415 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:44:58,955 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:45:00,519 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:45:01,776 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:45:02,307 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:46:33,411 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:46:33,717 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:47:17,083 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:47:17,789 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:47:18,242 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:47:18,676 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:47:19,451 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:38,915 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:38,981 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:39,128 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:39,223 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:39,767 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:39,975 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:40,102 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:50:40,259 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,176 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,327 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,562 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,636 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,698 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,821 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:51:33,862 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:52:26,984 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:52:27,355 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:52:27,960 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:52:28,281 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:52:28,926 [WARNING] django.request: Not Found: /players/
+2024-12-11 04:54:03,083 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 04:54:14,817 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 04:55:59,900 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 04:56:15,922 [WARNING] django.request: Not Found: /user/token/
+2024-12-11 04:56:46,614 [WARNING] django.request: Not Found: /user/token/
+2024-12-11 04:58:54,390 [WARNING] django.request: Unauthorized: /user/api/token/
+2024-12-11 04:59:08,589 [WARNING] django.request: Unauthorized: /user/api/token/
+2024-12-11 05:00:57,068 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:03:26,926 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:04:11,552 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:05:15,305 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:05:17,246 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:06:14,181 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:06:16,119 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:08:53,932 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:08:55,927 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:11:39,019 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:11:46,745 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:12:08,667 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:13:08,457 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:13:51,101 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:13:54,245 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:14:13,639 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:14:15,787 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:24:10,997 [WARNING] django.request: Forbidden: /leagues/matches/
+2024-12-11 05:24:48,797 [INFO] django.utils.autoreload: /Users/kalkadam/Desktop/Golazo/golazo_proj/leagues/views.py changed, reloading.
+2024-12-11 05:27:27,551 [INFO] articles: User '' attempting to create an article via API.
+2024-12-11 05:27:27,556 [INFO] articles: User '' attempting to create an article via API.
+2024-12-11 05:30:55,406 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 05:31:02,435 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 05:31:16,778 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 05:31:27,126 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 05:31:35,585 [WARNING] django.request: Not Found: /accounts/login/
+2024-12-11 05:41:25,036 [WARNING] django.request: Not Found: /players/
+2024-12-11 05:41:25,416 [WARNING] django.request: Not Found: /players/
+2024-12-11 05:41:30,255 [WARNING] django.request: Not Found: /players/
+2024-12-11 05:41:30,409 [WARNING] django.request: Not Found: /players/
+2024-12-11 05:54:03,120 [WARNING] django.request: Not Found: /admins
