@@ -1,0 +1,255 @@
+<script setup>
+import { ref, computed, onMounted, watch } from "vue";
+import axios from "axios";
+
+const players = ref([]);
+const isLoading = ref(true);
+const currentPage = ref(1);
+const totalPages = ref(42); // Обновите это значение динамически
+const searchQuery = ref("");
+const position = ref("");
+const minValue = ref(0);
+const maxValue = ref(100000000);
+
+// const fetchPlayers = async (page = 1) => {
+//     try {
+//         const { data } = await axios.get(
+//             http://127.0.0.1:8000/players/?page=${page}
+//         );
+//         players.value = data.results;
+//         currentPage.value = data.current_page;
+//         totalPages.value = data.total_pages;
+//         isLoading.value = false;
+//     } catch (error) {
+//         console.error("Error fetching players:", error);
+//     }
+// };
+
+const fetchPlayers = async (page = 1) => {
+    isLoading.value = true;
+    try {
+        // Формируем параметры запроса
+        const params = {
+            search: searchQuery.value,
+        };
+
+        // Запрашиваем данные у API
+        const { data } = await axios.get(
+            `http://127.0.0.1:8000/coaches/?page=${page}`,
+            {
+                params,
+            }
+        );
+
+        players.value = data.results;
+        currentPage.value = data.current_page;
+        totalPages.value = data.total_pages;
+    } catch (error) {
+        console.error("Ошибка при загрузке игроков:", error);
+    } finally {
+        isLoading.value = false;
+    }
+};
+
+watch([searchQuery, position, minValue, maxValue], fetchPlayers);
+
+onMounted(fetchPlayers);
+
+const goToPage = (page) => {
+    if (page >= 1 && page <= totalPages.value) {
+        fetchPlayers(page);
+    }
+};
+
+const visiblePages = computed(() => {
+    const pages = [];
+    const range = 2; // Количество страниц, видимых слева и справа от текущей
+    const start = Math.max(currentPage.value - range, 1);
+    const end = Math.min(currentPage.value + range, totalPages.value);
+
+    for (let i = start; i <= end; i++) {
+        pages.push(i);
+    }
+
+    return pages;
+});
+
+// Fetch initial data
+// fetchPlayers();
+</script>
+
+<template>
+    <div class="container">
+        <h1 class="my-5">Coaches</h1>
+
+        <div class="row mt-4" v-auto-animate>
+            <div
+                class="col-md-4 mb-4"
+                v-for="(player, index) in players"
+                :key="index"
+            >
+                <div class="card shadow-sm h-100">
+                    <div class="row g-0">
+                        <!-- Фотография игрока -->
+                        <div class="col-4">
+                            <img
+                                :src="player.photo"
+                                alt="Player Photo"
+                                class="img-fluid rounded-start"
+                                style="height: 160px; width: auto"
+                            />
+                        </div>
+                        <!-- Информация об игроке -->
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <NuxtLink
+                                        :to="`/players/${player.id}`"
+                                        class="text-decoration-none"
+                                    >
+                                        {{ player.name }}
+                                    </NuxtLink>
+                                </h5>
+                                <p class="card-text">
+                                    <strong>Position:</strong>
+                                    {{ player.position }} <br />
+                                    <strong>Value:</strong>
+                                    {{ player.value }} €
+                                </p>
+                                <NuxtLink
+                                    :to="`/players/${player.id}`"
+                                    class="btn btn-outline-primary"
+                                >
+                                    View Details
+                                </NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пагинация -->
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <!-- Кнопка для перехода на первую страницу -->
+                <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                    <button
+                        class="page-link"
+                        @click="goToPage(1)"
+                        :disabled="currentPage === 1"
+                    >
+                        &laquo; First
+                    </button>
+                </li>
+
+                <!-- Кнопка "Предыдущая" -->
+                <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                    <button
+                        class="page-link"
+                        @click="goToPage(currentPage - 1)"
+                        :disabled="currentPage === 1"
+                    >
+                        Previous
+                    </button>
+                </li>
+
+                <!-- Видимые страницы -->
+                <li
+                    v-for="page in visiblePages"
+                    :key="page"
+                    class="page-item"
+                    :class="{ active: currentPage === page }"
+                >
+                    <button
+                        class="page-link"
+                        @click="goToPage(page)"
+                        :disabled="currentPage === page"
+                    >
+                        {{ page }}
+                    </button>
+                </li>
+
+                <!-- Кнопка "Следующая" -->
+                <li
+                    class="page-item"
+                    :class="{ disabled: currentPage === totalPages }"
+                >
+                    <button
+                        class="page-link"
+                        @click="goToPage(currentPage + 1)"
+                        :disabled="currentPage === totalPages"
+                    >
+                        Next
+                    </button>
+                </li>
+
+                <!-- Кнопка для перехода на последнюю страницу -->
+                <li
+                    class="page-item"
+                    :class="{ disabled: currentPage === totalPages }"
+                >
+                    <button
+                        class="page-link"
+                        @click="goToPage(totalPages)"
+                        :disabled="currentPage === totalPages"
+                    >
+                        Last &raquo;
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <!-- </div> -->
+    </div>
+</template>
+
+<style scoped>
+.form-label {
+    font-weight: bold;
+    color: #003580;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #003580;
+    border: 2px solid #ffd700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #ffd700, #003580);
+    height: 4px;
+    border-radius: 2px;
+}
+.spinner {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #003580;
+    margin-top: 50px;
+}
+.pagination .page-item.active .page-link {
+    background-color: #003580;
+    color: white;
+    border-color: #003580;
+}
+
+.pagination .page-item.disabled .page-link {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pagination .page-link {
+    color: #003580;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #ffd700;
+    color: #003580;
+}
+</style>
