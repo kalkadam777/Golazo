@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Golazo{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h2>Latest Articles</h2>
+    <hr>
+    {% for article in latest_articles %}
+        <div class="card mb-4">
+            {% if article.image %}
+            <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+            {% endif %}
+            <div class="card-body">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.content|truncatewords:30 }}</p>
+                <small>by {{ article.author.username }} at {{ article.created_at|date:"d M, Y H:i" }}</small>
+            </div>
+            <div class="card-footer">
+                <h5>Comments:</h5>
+                <ul class="list-unstyled">
+                    {% for comment in article.comment_set.all %}
+                        <li class="mb-2">
+                            <strong>{{ comment.author.username }}:</strong> {{ comment.content }}
+                            <br><small>{{ comment.created_at|date:"d M, Y H:i" }}</small>
+                        </li>
+                    {% empty %}
+                        <li>No comments yet.</li>
+                    {% endfor %}
+                </ul>
+
+                {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'comment_create' %}">
+                        {% csrf_token %}
+                        {{ comment_form.as_p }}
+                        <input type="hidden" name="article_id" value="{{ article.id }}">
+                        <button type="submit" class="btn btn-primary">Add Comment</button>
+                    </form>
+                {% else %}
+                    <p><a href="{% url 'login' %}">Login</a> to comment.</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

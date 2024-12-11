@@ -28,26 +28,33 @@
                             <a
                                 href="{% url 'player-list' %}"
                                 class="{% if request.resolver_match.url_name == 'player-list' %}active{% endif %}"
-                                >Players</a
                             >
+                                Players
+                            </a>
                         </li>
-                        <li><a href="{% url 'league_list' %}">Leagues</a></li>
+                        <li>
+                            <a href="{% url 'league_list' %}">
+                                Leagues
+                            </a>
+                        </li>
                         <li>
                             <a
                                 href="{% url 'club-list' %}"
                                 class="{% if request.resolver_match.url_name == 'club-list' %}active{% endif %}"
-                                >Clubs</a
                             >
+                                Clubs
+                            </a>
                         </li>
                         {% if user.is_authenticated %}
                             {% if is_article_writer %}
-                            <li>
-                                <a
-                                    href="{% url 'create_article' %}"
-                                    class="{% if request.resolver_match.url_name == 'create_article' %}active{% endif %}"
-                                    >Create Article</a
-                                >
-                            </li>
+                                <li>
+                                    <a
+                                        href="{% url 'create_article' %}"
+                                        class="{% if request.resolver_match.url_name == 'create_article' %}active{% endif %}"
+                                    >
+                                        Create Article
+                                    </a>
+                                </li>
                             {% endif %}
                             <li>
                                 <a href="{% url 'logout' %}">Logout</a>
@@ -57,15 +64,17 @@
                                 <a
                                     href="{% url 'login' %}"
                                     class="{% if request.resolver_match.url_name == 'login' %}active{% endif %}"
-                                    >Login</a
                                 >
+                                    Login
+                                </a>
                             </li>
                             <li>
                                 <a
                                     href="{% url 'register' %}"
                                     class="{% if request.resolver_match.url_name == 'register' %}active{% endif %}"
-                                    >Register</a
                                 >
+                                    Register
+                                </a>
                             </li>
                         {% endif %}
                     </ul>
@@ -74,8 +83,11 @@
         </header>
 
         <main class="main-content">
-            <div class="container">{% block content %}{% endblock %}</div>
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
         </main>
+
         <footer class="footer">
             <div class="container footer-content">
                 <p>&copy; 2024 Golazo | Your Ultimate Football Hub</p>

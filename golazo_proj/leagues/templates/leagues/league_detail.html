@@ -4,7 +4,9 @@
 
 {% block content %}
 <h1>{{ league.name }}</h1>
-<img src="{{ league.logo.url }}" alt="{{ league.name }}" style="width: 150px; height: auto;">
+{% if league.logo %}
+    <img src="{{ league.logo.url }}" alt="{{ league.name }}" style="width: 150px; height: auto;">
+{% endif %}
 <p>Country: {{ league.country }}</p>
 <p>Start Date: {{ league.start_date }}</p>
 <p>End Date: {{ league.end_date }}</p>
@@ -14,13 +16,13 @@
     <thead>
         <tr>
             <th>Club</th>
-            <th>Matches Played</th>
-            <th>Wins</th>
-            <th>Draws</th>
-            <th>Losses</th>
-            <th>Goals Scored</th>
-            <th>Goals Conceded</th>
-            <th>Points</th>
+            <th>MP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>Pts</th>
         </tr>
     </thead>
     <tbody>
@@ -40,20 +42,31 @@
 </table>
 
 <h2>Matches</h2>
-<ul>
+<ul class="list-group mb-3">
     {% for match in matches %}
-    <li>
-        {{ match.home_team.name }} {{ match.home_team_score }} - {{ match.away_team_score }} {{ match.away_team.name }}
-        ({{ match.match_date }})
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>
+            {{ match.home_team.name }} 
+            <strong>{{ match.home_team_score }} - {{ match.away_team_score }}</strong> 
+            {{ match.away_team.name }}
+            ({{ match.match_date|date:"d M Y" }})
+        </span>
     </li>
+    {% empty %}
+    <li class="list-group-item">No matches yet.</li>
     {% endfor %}
 </ul>
 
-{% if can_add_match %}
-<a href="{% url 'generate_matches' league.pk %}">Generate Matches</a>
-{% endif %}
+<div class="mt-4">
 
-{% if can_change_standings %}
-<a href="{% url 'update_standings' league.pk %}">Update Standings</a>
-{% endif %}
+
+    {% if can_change_standings %}
+        <a href="{% url 'update_standings' league.pk %}" class="btn btn-outline-secondary me-2">
+            Update Standings
+        </a>
+        
+
+    {% endif %}
+</div>
+
 {% endblock %}

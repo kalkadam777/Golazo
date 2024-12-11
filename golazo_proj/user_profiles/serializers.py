@@ -6,20 +6,13 @@ from django.contrib.auth.password_validation import validate_password
 
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
-        required=True, 
+        required=True,
         validators=[UniqueValidator(queryset=User.objects.all())]
     )
     password = serializers.CharField(
-        write_only=True, 
-        required=True, 
-        validators=[validate_password],
-        style={'input_type': 'password'}
+        write_only=True, required=True, validators=[validate_password]
     )
-    password_confirm = serializers.CharField(
-        write_only=True, 
-        required=True,
-        style={'input_type': 'password'}
-    )
+    password_confirm = serializers.CharField(write_only=True, required=True)
 
     class Meta:
         model = User
@@ -40,12 +33,10 @@ class RegisterSerializer(serializers.ModelSerializer):
         UserProfile.objects.create(user=user)
         return user
 
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email']
-
 
 class UserProfileSerializer(serializers.ModelSerializer):
     favorite_players = serializers.StringRelatedField(many=True)
@@ -53,4 +44,4 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ['user', 'favorite_players', 'favorite_clubs']
+        fields = '__all__'

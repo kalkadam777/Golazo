@@ -7,7 +7,8 @@ from .views import (
     league_list,
     league_detail,
     generate_matches,
-    update_standings
+    update_standings,
+    randomize_past_results
 )
 
 router = DefaultRouter()
@@ -20,5 +21,6 @@ urlpatterns = [
     path('leagues/<int:pk>/', league_detail, name='league_detail'),
     path('leagues/<int:pk>/generate-matches/', generate_matches, name='generate_matches'),
     path('leagues/<int:pk>/update-standings/', update_standings, name='update_standings'),
+    path('leagues/<int:pk>/randomize-results/', randomize_past_results, name='randomize_past_results'),
     path('', include(router.urls)),
 ]

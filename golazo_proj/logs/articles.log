@@ -2,3 +2,84 @@
 2024-12-10 23:10:28,103 [WARNING] django.request: Unauthorized: /user/token/
 2024-12-10 23:11:36,445 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/golazo_proj/settings.py changed, reloading.
 2024-12-10 23:12:25,642 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/clubs/views.py changed, reloading.
+2024-12-10 23:48:13,510 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/players/views.py", line 27, in home
+    return render(request, 'home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+2024-12-10 23:48:13,843 [WARNING] django.request: Not Found: /favicon.ico
+2024-12-10 23:48:49,292 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/views.py changed, reloading.
+2024-12-10 23:50:21,242 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/article/admin.py changed, reloading.
+2024-12-10 23:51:18,956 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/article/admin.py changed, reloading.
+2024-12-10 23:54:17,019 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/serializers.py changed, reloading.
+2024-12-10 23:54:32,072 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/views.py changed, reloading.
+2024-12-10 23:54:43,976 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/urls.py changed, reloading.
+2024-12-10 23:55:20,579 [INFO] articles: Article list accessed.
+2024-12-10 23:56:24,847 [INFO] articles: Article list accessed.
+2024-12-10 23:57:04,773 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/article/views.py changed, reloading.
+2024-12-11 00:00:59,015 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/article/views.py changed, reloading.
+2024-12-11 00:01:25,060 [INFO] articles: Article list accessed.
+2024-12-11 00:01:31,184 [INFO] articles: Comment created on article 'CR7' by user 'Alzhan'.
+2024-12-11 00:01:44,041 [INFO] articles: Article list accessed.
+2024-12-11 00:02:32,027 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/views.py changed, reloading.
+2024-12-11 00:02:39,816 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/user_profiles/serializers.py changed, reloading.
+2024-12-11 00:08:35,969 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/leagues/views.py changed, reloading.
+2024-12-11 00:08:51,004 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/leagues/urls.py changed, reloading.
+2024-12-11 00:10:23,139 [INFO] leagues.views: Randomized past results for league LaLiga up to 2024-12-11. Matches updated: 338
