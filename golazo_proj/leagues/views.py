@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 class LeagueViewSet(viewsets.ModelViewSet):
     queryset = League.objects.all()
     serializer_class = LeagueSerializer
-    permission_classes = [IsAuthenticated]
+    
 
 
 class MatchViewSet(viewsets.ModelViewSet):

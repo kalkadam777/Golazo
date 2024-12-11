@@ -67,8 +67,9 @@ INSTALLED_APPS = [
     'coaches',
     'leagues',
     'django_filters',
+    'broadcasts',
     'drf_yasg',
-        'rest_framework_simplejwt.token_blacklist',
+    'rest_framework_simplejwt.token_blacklist',
 
 ]
 

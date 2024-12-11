@@ -83,3 +83,35 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is
 2024-12-11 00:08:35,969 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/leagues/views.py changed, reloading.
 2024-12-11 00:08:51,004 [INFO] django.utils.autoreload: /Users/lzandaribaev/Desktop/WEB/projects/Golazo/golazo_proj/leagues/urls.py changed, reloading.
 2024-12-11 00:10:23,139 [INFO] leagues.views: Randomized past results for league LaLiga up to 2024-12-11. Matches updated: 338
+2024-12-11 05:18:01,825 [INFO] articles: User '' attempting to create an article via API.
+2024-12-11 05:18:01,826 [INFO] articles: User '' attempting to create an article via API.
+2024-12-11 05:18:48,096 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\article\serializers.py changed, reloading.
+2024-12-11 05:18:53,916 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\article\serializers.py changed, reloading.
+2024-12-11 05:20:28,738 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:25:32,033 [WARNING] django.request: Not Found: /‰ÛÙÔ„Û˚
+2024-12-11 05:25:46,183 [WARNING] django.request: Unauthorized: /leagues/matches/
+2024-12-11 05:26:05,125 [WARNING] django.request: Unauthorized: /leagues/leagues/
+2024-12-11 05:26:07,524 [WARNING] django.request: Unauthorized: /leagues/standings/
+2024-12-11 05:29:28,381 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\leagues\views.py changed, reloading.
+2024-12-11 05:34:07,614 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\leagues\views.py changed, reloading.
+2024-12-11 05:34:11,272 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\leagues\views.py changed, reloading.
+2024-12-11 05:43:05,223 [WARNING] django.request: Bad Request: /leagues/leagues/
+2024-12-11 06:20:13,956 [WARNING] django.request: Not Found: /broadcast
+2024-12-11 06:20:31,921 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\golazo_proj\urls.py changed, reloading.
+2024-12-11 06:21:11,565 [WARNING] django.request: Not Found: /broadcast
+2024-12-11 06:21:23,135 [WARNING] django.request: Not Found: /broadcasts/1/
+2024-12-11 06:22:49,815 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:22:56,783 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:23:00,089 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:23:05,891 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:24:04,135 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:24:06,810 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:24:25,432 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:24:31,807 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:24:38,549 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:04,817 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:08,628 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:12,091 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:15,531 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:31,200 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.
+2024-12-11 06:25:42,274 [INFO] django.utils.autoreload: C:\Users\User\Desktop\group\Golazo\golazo_proj\broadcasts\admin.py changed, reloading.

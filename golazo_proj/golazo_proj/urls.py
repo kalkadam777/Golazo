@@ -42,6 +42,7 @@ urlpatterns = [
     path('clubs/', include('clubs.urls')),
     path('', player_views.home, name='home'),
     path('user/', include('user_profiles.urls')),
+    path('broadcasts/', include('broadcasts.urls')),
     path('articles/', include('article.urls')),
     path('coaches/', include('coaches.urls')),
     path('leagues/', include('leagues.urls')),
